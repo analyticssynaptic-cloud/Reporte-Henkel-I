@@ -10,17 +10,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 :root {
-    --p-navy: #1a1210; --p-deep: #3a0d0d; --p-blue: #E1000F; --p-sky: #ff3344; --p-aqua: #ff7a6b; --p-mint: #ffb199;
-    --p-fresh: #ffd9cf; --p-white: #ffffff; --p-gray: #64748b; --p-gray2: #94a3b8;
-    --p-border: #ece4e2; --p-line: #f3ecea; --p-soft: #faf7f6; --p-green: #0e7a5f; --p-orange: #a86a1a;
-    --p-red: #7a1c1c; --p-gold: #a37b3a; --p-plum: #6b4e88;
+    --p-navy: #241c1c; --p-deep: #a30000; --p-blue: #E1000F; --p-sky: #ff5c5c; --p-aqua: #ff4b4b; --p-mint: #ffdede;
+    --p-fresh: #fff0f0; --p-white: #ffffff; --p-gray: #8a7a7b; --p-gray2: #cdc0c1;
+    --p-border: #ecd8d8; --p-line: #f1e8e8; --p-soft: #f6f5f5; --p-green: #0e7a5f; --p-orange: #a86a1a;
+    --p-red: #7a2020; --p-gold: #a37b3a; --p-plum: #6b4e88; --p-graddark: #7a0000;
 }
 * { box-sizing: border-box; }
 html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--p-soft); color: var(--p-navy); margin: 0; padding: 0; overflow-x: hidden; letter-spacing: -0.005em; }
 
-.hero { height: 480px; background: radial-gradient(circle at 80% 15%, rgba(255,51,68,0.35), transparent 55%), linear-gradient(125deg, var(--p-navy) 0%, var(--p-deep) 55%, var(--p-blue) 130%); display: flex; align-items: center; justify-content: center; text-align: center; color: white; position: relative; }
-.hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--p-aqua), var(--p-mint), var(--p-fresh)); }
+.hero { height: 480px; background: radial-gradient(circle at 80% 15%, rgba(255,255,255,0.14), transparent 55%), linear-gradient(140deg, var(--p-aqua) 0%, var(--p-blue) 55%, var(--p-graddark) 100%); display: flex; align-items: center; justify-content: center; text-align: center; color: white; position: relative; }
+.hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--p-graddark), var(--p-blue), var(--p-sky)); }
 .hero::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 120px; background: linear-gradient(180deg, transparent, var(--p-soft)); }
 .hero-topbar { position: absolute; top: 30px; left: 50px; right: 50px; display: flex; justify-content: space-between; align-items: center; font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: rgba(255, 255, 255, 0.72); font-weight: 600; z-index: 3; }
 .hero-topbar .brand-mark { display: inline-flex; align-items: center; gap: 12px; }
@@ -31,7 +31,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--p-s
 .hero .brand-line { font-size: 0.75rem; letter-spacing: 8px; text-transform: uppercase; color: var(--p-fresh); font-weight: 700; margin-bottom: 22px; }
 .hero h1 { font-size: 4.6rem; font-weight: 900; margin: 0; letter-spacing: -3px; line-height: 1; text-shadow: 0 4px 30px rgba(0, 0, 0, 0.30); }
 .hero h1 .lit { font-weight: 300; color: rgba(255, 255, 255, 0.85); }
-.hero h1 .accent { background: linear-gradient(90deg, var(--p-fresh), var(--p-mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero h1 .accent { background: linear-gradient(90deg, #ffffff, var(--p-mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .hero .subtitle { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 9px; margin-top: 30px; font-weight: 600; color: var(--p-fresh); }
 .hero .hero-facts { display: flex; gap: 60px; justify-content: center; margin-top: 45px; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.18); max-width: 720px; margin-left: auto; margin-right: auto; }
 .hero .hero-facts div .n { font-size: 1.9rem; font-weight: 800; color: white; line-height: 1; letter-spacing: -1px; }
@@ -40,7 +40,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--p-s
 .container { max-width: 1360px; margin: -80px auto 0; padding: 0 20px; position: relative; z-index: 3; }
 
 .exec-summary { background: var(--p-white); padding: 55px; border-radius: 4px; box-shadow: 0 25px 55px -10px rgba(26, 18, 16, 0.14); margin-bottom: 45px; border: 1px solid var(--p-border); position: relative; overflow: hidden; }
-.exec-summary::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--p-blue), var(--p-aqua), var(--p-mint)); }
+.exec-summary::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--p-graddark), var(--p-blue), var(--p-sky)); }
 .exec-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--p-line); padding-bottom: 24px; margin-bottom: 40px; }
 .exec-head .kicker { font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: var(--p-gray); font-weight: 700; }
 .exec-head h2 { font-size: 1.6rem; margin: 0; font-weight: 800; letter-spacing: -1px; color: var(--p-navy); }
@@ -51,8 +51,8 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--p-s
 .exec-item p { margin: 0; font-size: 0.9rem; line-height: 1.65; color: var(--p-gray); }
 .exec-item p strong { color: var(--p-navy); font-weight: 700; }
 
-.spotlight { background: linear-gradient(125deg, var(--p-navy) 0%, var(--p-deep) 55%, var(--p-blue) 130%); color: white; border-radius: 4px; padding: 40px 50px; margin-bottom: 45px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px; box-shadow: 0 20px 45px rgba(58, 13, 13, 0.25); position: relative; overflow: hidden; }
-.spotlight::after { content: ''; position: absolute; top: -120px; right: -120px; width: 320px; height: 320px; background: radial-gradient(circle, rgba(255, 178, 153, 0.20), transparent 70%); border-radius: 50%; }
+.spotlight { background: linear-gradient(140deg, var(--p-aqua) 0%, var(--p-blue) 55%, var(--p-graddark) 100%); color: white; border-radius: 4px; padding: 40px 50px; margin-bottom: 45px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px; box-shadow: 0 20px 45px rgba(122, 0, 0, 0.25); position: relative; overflow: hidden; }
+.spotlight::after { content: ''; position: absolute; top: -120px; right: -120px; width: 320px; height: 320px; background: radial-gradient(circle, rgba(255, 255, 255, 0.16), transparent 70%); border-radius: 50%; }
 .sp-stat { text-align: left; border-right: 1px solid rgba(255, 255, 255, 0.14); padding-right: 20px; position: relative; z-index: 1; }
 .sp-stat:last-child { border-right: none; }
 .sp-stat .sp-lbl { font-size: 0.62rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--p-fresh); font-weight: 700; margin-bottom: 14px; opacity: 0.9; }
@@ -126,8 +126,8 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--p-s
 .pill.warn { background: #f7edd6; color: var(--p-orange); border-color: #e2c896; }
 .pill.neg { background: #f0dcdc; color: var(--p-red); border-color: #d9b6b6; }
 
-.strategy-box { background: linear-gradient(135deg, var(--p-navy) 0%, var(--p-deep) 55%, var(--p-blue) 130%); color: white; padding: 55px; border-radius: 4px; margin-bottom: 55px; position: relative; overflow: hidden; }
-.strategy-box::before { content: ''; position: absolute; top: -80px; right: -80px; width: 340px; height: 340px; background: radial-gradient(circle, rgba(255, 178, 153, 0.15), transparent 70%); border-radius: 50%; }
+.strategy-box { background: linear-gradient(140deg, var(--p-aqua) 0%, var(--p-blue) 55%, var(--p-graddark) 100%); color: white; padding: 55px; border-radius: 4px; margin-bottom: 55px; position: relative; overflow: hidden; }
+.strategy-box::before { content: ''; position: absolute; top: -80px; right: -80px; width: 340px; height: 340px; background: radial-gradient(circle, rgba(255, 255, 255, 0.14), transparent 70%); border-radius: 50%; }
 .strategy-box .kick { font-size: 0.7rem; letter-spacing: 3.5px; text-transform: uppercase; color: var(--p-fresh); font-weight: 700; margin-bottom: 16px; position: relative; }
 .strategy-box h3 { font-size: 1.75rem; margin: 0 0 12px; color: white; font-weight: 800; letter-spacing: -1px; position: relative; }
 .strategy-box .sub { color: rgba(255, 255, 255, 0.75); margin: 0 0 36px; font-size: 0.96rem; max-width: 720px; line-height: 1.65; position: relative; }
@@ -137,15 +137,27 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--p-s
 .strat-item h6 .st-ico { width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; color: var(--p-fresh); font-size: 0.82rem; }
 .strat-item p { font-size: 0.86rem; opacity: 0.9; line-height: 1.6; margin: 0; color: rgba(255, 255, 255, 0.85); }
 
-.foot { background: linear-gradient(135deg, var(--p-navy), var(--p-deep) 60%, var(--p-blue)); color: white; padding: 80px 0 40px; margin-top: 65px; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; }
+.foot { background: linear-gradient(140deg, var(--p-graddark), var(--p-blue) 60%, var(--p-aqua)); color: white; padding: 80px 0 40px; margin-top: 65px; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; }
 .foot-in { max-width: 1300px; margin: 0 auto; padding: 0 40px; }
 .foot-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 60px; padding-bottom: 50px; border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
 .foot-brand { font-size: 2.9rem; font-weight: 900; letter-spacing: -1.5px; line-height: 1; margin: 0 0 14px; }
-.foot-brand .accent { background: linear-gradient(90deg, var(--p-fresh), var(--p-mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.foot-brand .accent { background: linear-gradient(90deg, #ffffff, var(--p-mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .foot-brand-sub { font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: rgba(255, 255, 255, 0.55); font-weight: 600; }
 .foot-col h6 { font-size: 0.66rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--p-fresh); font-weight: 800; margin: 0 0 16px; }
 .foot-col p { font-size: 0.86rem; line-height: 1.65; color: rgba(255, 255, 255, 0.72); margin: 0 0 8px; }
 .foot-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; font-size: 0.67rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(255, 255, 255, 0.42); font-weight: 600; }
+
+.carousel { max-width: 620px; margin: 0 auto 26px; }
+.car-stage { position: relative; aspect-ratio: 4/3; background: var(--p-navy); border-radius: 4px; overflow: hidden; cursor: pointer; box-shadow: 0 15px 35px rgba(122,0,0,0.16); }
+.car-stage img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 0.25s ease; }
+.car-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.9); color: var(--p-navy); border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2; }
+.car-nav:hover { background: #fff; }
+.car-nav.prev { left: 12px; } .car-nav.next { right: 12px; }
+.car-counter { position: absolute; bottom: 12px; right: 14px; background: rgba(36,28,28,0.6); color: #fff; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px; }
+.car-caption { text-align: center; padding: 14px 10px 2px; }
+.car-caption #carPdv { font-size: 1rem; font-weight: 800; color: var(--p-navy); }
+.car-caption #carMeta { font-size: 0.78rem; color: var(--p-gray); margin-top: 3px; }
+@media (max-width: 640px) { .car-nav { width: 36px; height: 36px; } }
 
 @media (max-width: 1024px) {
     .exec-grid, .strat-grid, .chart-split, .func-wrap { grid-template-columns: 1fr; }
@@ -214,8 +226,8 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--p-s
             <div class="exec-item">
                 <div class="ico"><i class="fa-solid fa-gift"></i></div>
                 <div>
-                    <h4>04 · El cambio de negocio en premios quedó bien desplegado</h4>
-                    <p>El viernes el 100% de las visitas todavía preguntaba "cuánto queda"; desde el sábado el <strong>94% ya pregunta "cuánto entregaste"</strong> directamente. Con esa pregunta activa, la rotación medible es de <strong>46.7%</strong> (305 de 653 unidades entregadas sábado-domingo).</p>
+                    <h4>04 · Los premios ya rotan de verdad</h4>
+                    <p>De las unidades con seguimiento detallado de entrega, <strong>46.7%</strong> ya llegó a manos del consumidor (305 de 653) — el gorro es el que más rápido rota (59.8%). Ver el detalle por producto en la sección 03.</p>
                 </div>
             </div>
         </div>
@@ -225,7 +237,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--p-s
         <div class="sp-stat"><div class="sp-lbl">Tasa de cierre</div><h2>98<small>%</small></h2><div class="sp-sub">50 de 51 visitas con venta reportada</div></div>
         <div class="sp-stat"><div class="sp-lbl">Unidades vendidas</div><h2>332</h2><div class="sp-sub">298 líneas de producto en 3 días</div></div>
         <div class="sp-stat"><div class="sp-lbl">Participación real GLISS</div><h2>92.5<small>%</small></h2><div class="sp-sub">Por nombre de producto vendido</div></div>
-        <div class="sp-stat"><div class="sp-lbl">Rotación de premios</div><h2>46.7<small>%</small></h2><div class="sp-sub">Ventana comparable sáb-dom</div></div>
+        <div class="sp-stat"><div class="sp-lbl">Rotación de premios</div><h2>46.7<small>%</small></h2><div class="sp-sub">Sobre unidades con seguimiento directo</div></div>
         <div class="sp-stat"><div class="sp-lbl">Ya conocía la marca</div><h2>54<small>%</small></h2><div class="sp-sub">149 de 277 consumidores encuestados</div></div>
     </div>
 
@@ -291,7 +303,17 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--p-s
         </table>
         </div>
     </div>
-    <p class="section-sub" style="margin-top:-14px;"><i class="fa-solid fa-circle-info" style="color:var(--p-blue);margin-right:6px;"></i>"Sara Valero" y "Sara valero" aparecen con dos formas de escritura distintas en la captura — probablemente la misma persona en dos visitas. Vale la pena confirmar y unificar el nombre para el próximo corte.</p>
+    <div class="subsection-title">Condiciones puntuales del punto de venta</div>
+    <p class="section-sub" style="margin-top:0;">Situaciones puntuales reportadas en campo que explican por qué algunos puntos no tuvieron el mismo desempeño — no dependen de la ejecución de la visita.</p>
+    <div class="table-container full" style="margin-bottom:26px;">
+        <table class="table-data">
+            <tr><th>Punto de venta</th><th>Ciudad</th><th>Nota</th></tr>
+            <tr><td>Euro Salomón</td><td>Medellín</td><td>Sin inventario de producto GLISS disponible en el punto.</td></tr>
+            <tr><td>Euro Frontera</td><td>Medellín</td><td>Sin inventario de producto GLISS disponible en el punto.</td></tr>
+            <tr><td>Jumbo Chía</td><td>Chía</td><td>Sin inventario de producto GLISS disponible en el punto.</td></tr>
+            <tr><td>Droguería Villa Colombia</td><td>Bogotá</td><td>No autorizó la activación de impulso el 5 de septiembre por permisos internos del punto. La asesora se trasladó y ejecutó la visita en Éxito Chapinero ese mismo día.</td></tr>
+        </table>
+    </div>
 
     <!-- 02 -->
     <div class="section-hero"><div class="num">02</div><h2 class="section-title">Ejecución de <em>venta (sell-out)</em></h2></div>
@@ -382,41 +404,24 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--p-s
 
     <!-- 03 -->
     <div class="section-hero"><div class="num">03</div><h2 class="section-title">Premios: <em>recibidos y entregados</em></h2></div>
-    <p class="section-sub">Este fin de semana cambió la pregunta de negocio en caliente: antes se preguntaba <em>"¿qué te llegó / cuánto queda?"</em>, ahora se pregunta directamente <em>"¿cuánto recibiste del supervisor?"</em> y <em>"¿cuánto entregaste?"</em>. Los datos muestran el momento exacto del cambio.</p>
-
-    <div class="func-wrap">
-        <div class="func-block">
-            <div class="func-head"><div class="func-ico"><i class="fa-solid fa-clock-rotate-left"></i></div><div><h3>Viernes 4 de septiembre</h3><div class="func-sub">Todavía con la pregunta anterior</div></div></div>
-            <div class="func-row"><span class="fr-lbl">Visitas con dato de premios</span><span class="fr-val">17 de 17</span></div>
-            <div class="func-row"><span class="fr-lbl">Pregunta activa</span><span class="fr-val">"¿Cuánto queda?"</span></div>
-            <div class="func-row"><span class="fr-lbl">Mide</span><span class="fr-val">Inventario físico</span></div>
-            <div class="func-note">El viernes el 100% de la fuerza todavía tenía la versión anterior de la app: se registró cuánto <strong>recibió</strong> cada asesora, pero lo que "quedaba" es una foto del inventario acumulado, no lo entregado ese día — por eso no se compara contra el sábado/domingo.</div>
-        </div>
-        <div class="func-block impulso">
-            <div class="func-head"><div class="func-ico"><i class="fa-solid fa-gift"></i></div><div><h3>Sábado 5 y domingo 6</h3><div class="func-sub">Ya con la pregunta nueva</div></div></div>
-            <div class="func-row"><span class="fr-lbl">Visitas con la pregunta nueva</span><span class="fr-val">33 de 35 (94.3%)</span></div>
-            <div class="func-row"><span class="fr-lbl">Pregunta activa</span><span class="fr-val">"¿Cuánto entregaste?"</span></div>
-            <div class="func-row"><span class="fr-lbl">Rezagada por actualizar</span><span class="fr-val">1 (Euro Frontera, sáb 9:06am)</span></div>
-            <div class="func-note">El cambio quedó desplegado limpio: desde el sábado, prácticamente toda la fuerza ya entrega el dato directo de entrega — sin tener que inferir nada restando inventarios. Solo falta una asesora por actualizar caché de la app.</div>
-        </div>
-    </div>
+    <p class="section-sub">Las piezas que el equipo comercial recibió del supervisor y las que ya entregó a los consumidores en punto de venta durante el fin de semana.</p>
 
     <div class="kpi-row">
         <div class="kpi-card"><div class="k-ico"><i class="fa-solid fa-box-open"></i></div><div class="k-lbl">Recibido (todo el finde)</div><h3>1,106<small> uds.</small></h3><div class="k-note">Del supervisor a las asesoras, viernes a domingo.</div></div>
-        <div class="kpi-card"><div class="k-ico"><i class="fa-solid fa-handshake"></i></div><div class="k-lbl">Entregado (ventana comparable)</div><h3>305<small> uds.</small></h3><div class="k-note">Solo sábado + domingo, ya con la pregunta correcta activa.</div></div>
-        <div class="kpi-card pos"><div class="k-ico"><i class="fa-solid fa-rotate"></i></div><div class="k-lbl">Rotación (sáb-dom)</div><h3>46.7<small>%</small></h3><div class="k-note">305 de 653 unidades recibidas en esa misma ventana.</div></div>
-        <div class="kpi-card"><div class="k-ico"><i class="fa-solid fa-scissors"></i></div><div class="k-lbl">Premio más entregado</div><h3>Scrunchi</h3><div class="k-note">96 unidades entregadas sáb-dom, el de mayor rotación en piezas.</div></div>
+        <div class="kpi-card"><div class="k-ico"><i class="fa-solid fa-handshake"></i></div><div class="k-lbl">Entregado registrado</div><h3>305<small> uds.</small></h3><div class="k-note">Sobre las visitas con seguimiento detallado de entrega por producto.</div></div>
+        <div class="kpi-card pos"><div class="k-ico"><i class="fa-solid fa-rotate"></i></div><div class="k-lbl">Rotación</div><h3>46.7<small>%</small></h3><div class="k-note">305 de 653 unidades, sobre esa misma base con seguimiento detallado.</div></div>
+        <div class="kpi-card"><div class="k-ico"><i class="fa-solid fa-scissors"></i></div><div class="k-lbl">Premio más entregado</div><h3>Scrunchi</h3><div class="k-note">96 unidades, el de mayor volumen entregado.</div></div>
     </div>
 
     <div class="chart-box">
-        <div class="cb-head"><h3>Recibido vs. entregado por producto</h3><div class="cb-tag">Fig. 08 · Ventana sáb-dom</div></div>
-        <p class="cb-sub">Solo se compara la ventana en la que ya estaba activa la pregunta correcta de entrega.</p>
+        <div class="cb-head"><h3>Recibido vs. entregado por producto</h3><div class="cb-tag">Fig. 08</div></div>
+        <p class="cb-sub">Sobre las visitas con seguimiento detallado de entrega por producto.</p>
         <div class="chart-container"><canvas id="chartPremiosGrouped"></canvas></div>
     </div>
 
     <div class="table-container full" style="margin-bottom:26px;">
-        <h3>Rotación por producto (sábado + domingo)</h3>
-        <p class="tbl-sub">"Recibido" es lo que llegó del supervisor en esa misma ventana; "quedan" es un cálculo interno (recibido − entregado), no una pregunta aparte.</p>
+        <h3>Rotación por producto</h3>
+        <p class="tbl-sub">"Quedan" es un cálculo interno (recibido − entregado), no una pregunta aparte.</p>
         <table class="table-data">
             <tr><th>Premio</th><th class="num">Recibidos</th><th class="num">Entregados</th><th class="num">Quedan</th><th class="num">Rotación</th></tr>
             <tr><td>Gorro con caja GLISS</td><td class="num">112</td><td class="num">67</td><td class="num">45</td><td class="num">59.8%</td></tr>
@@ -545,6 +550,19 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--p-s
         </div>
     </div>
 
+    <!-- 07 -->
+    <div class="section-hero"><div class="num">07</div><h2 class="section-title">Evidencia <em>fotográfica</em></h2></div>
+    <p class="section-sub">Las 52 fotos de ingreso del fin de semana, una por visita. Va rotando sola, o dale clic para pasar a la siguiente.</p>
+    <div class="carousel">
+        <div class="car-stage" id="carStage">
+            <button class="car-nav prev" id="carPrev"><i class="fa-solid fa-chevron-left"></i></button>
+            <img id="carImg" src="" alt="" referrerpolicy="no-referrer">
+            <button class="car-nav next" id="carNext"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="car-counter" id="carCounter"></div>
+        </div>
+        <div class="car-caption"><div id="carPdv"></div><div id="carMeta"></div></div>
+    </div>
+
     <!-- PLAN DE ACCIÓN -->
     <div class="strategy-box">
         <div class="kick">Foco para el próximo fin de semana</div>
@@ -590,12 +608,12 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--p-s
 
 <script>
 Chart.register(ChartDataLabels);
-const RED='#E1000F', BLACK='#1a1210', CHAR='#3a0d0d', CORAL='#ff7a6b', PEACH='#ffb199', GOLD='#a37b3a',
-    SLATE='#64748b', SLATE2='#94a3b8', POS='#0e7a5f', WARN='#a86a1a', NEG='#7a1c1c';
+const RED='#E1000F', DEEP='#7a0000', DEEP2='#a30000', LIGHT='#ff5c5c', INK='#241c1c', GOLD='#a37b3a',
+    SLATE='#8a7a7b', SLATE2='#cdc0c1', POS='#0e7a5f', WARN='#a86a1a', NEG='#7a2020';
 const font = { family: 'Plus Jakarta Sans', weight: '600', size: 11 };
-const axisGrid = { grid: { color: '#f3ecea', drawTicks: false }, ticks: { color: SLATE, font, padding: 8 }, border: { display: false } };
+const axisGrid = { grid: { color: '#f1e8e8', drawTicks: false }, ticks: { color: SLATE, font, padding: 8 }, border: { display: false } };
 const axisPlain = { grid: { display: false, drawTicks: false }, ticks: { color: SLATE, font, padding: 8 }, border: { display: false } };
-const donutPalette = [RED, BLACK, CORAL, PEACH, GOLD, SLATE2, '#e2c896'];
+const donutPalette = [RED, INK, LIGHT, GOLD, DEEP2, SLATE, DEEP, SLATE2, '#c98a7a'];
 
 function donut(id, labels, data) {
     new Chart(document.getElementById(id), {
@@ -603,7 +621,7 @@ function donut(id, labels, data) {
         data: { labels, datasets: [{ data, backgroundColor: donutPalette, borderColor: '#fff', borderWidth: 3 }] },
         options: { maintainAspectRatio: false, responsive: true, cutout: '62%',
             plugins: {
-                legend: { position: 'bottom', labels: { color: BLACK, font, boxWidth: 10, padding: 14 } },
+                legend: { position: 'bottom', labels: { color: INK, font, boxWidth: 10, padding: 14 } },
                 datalabels: { color: '#fff', font: { family: 'Plus Jakarta Sans', weight: '800', size: 11 },
                     formatter: (v, ctx) => { const total = ctx.chart.data.datasets[0].data.reduce((a,b)=>a+b,0); const pct = total? (v/total*100):0; return pct>=6 ? pct.toFixed(0)+'%' : ''; } }
             } }
@@ -614,14 +632,14 @@ function barH(id, labels, data, color) {
         type: 'bar',
         data: { labels, datasets: [{ data, backgroundColor: color || RED, borderRadius: 3, barPercentage: 0.65 }] },
         options: { indexAxis: 'y', maintainAspectRatio: false, responsive: true,
-            plugins: { legend: { display: false }, datalabels: { color: BLACK, font: { family: 'Plus Jakarta Sans', weight: '800', size: 11 }, anchor: 'end', align: 'end', offset: 6 } },
+            plugins: { legend: { display: false }, datalabels: { color: INK, font: { family: 'Plus Jakarta Sans', weight: '800', size: 11 }, anchor: 'end', align: 'end', offset: 6 } },
             scales: { x: { ...axisGrid, beginAtZero: true }, y: axisPlain } }
     });
 }
 
 new Chart(document.getElementById('chartCadencia'), {
     type: 'bar',
-    data: { labels: ['Vie 04','Sáb 05','Dom 06'], datasets: [{ data: [17,17,18], backgroundColor: [BLACK,RED,CORAL], borderRadius: 3, barPercentage: 0.45, categoryPercentage: 0.6 }] },
+    data: { labels: ['Vie 04','Sáb 05','Dom 06'], datasets: [{ data: [17,17,18], backgroundColor: [DEEP,RED,LIGHT], borderRadius: 3, barPercentage: 0.45, categoryPercentage: 0.6 }] },
     options: { maintainAspectRatio: false, responsive: true,
         plugins: { legend: { display: false }, datalabels: { color: 'white', font: { family: 'Plus Jakarta Sans', weight: '800', size: 15 }, anchor: 'center', align: 'center' } },
         scales: { y: { ...axisGrid, beginAtZero: true, ticks: { ...axisGrid.ticks, stepSize: 5 } }, x: axisPlain } }
@@ -634,7 +652,7 @@ new Chart(document.getElementById('chartUnidadesDia'), {
     type: 'line',
     data: { labels: ['Viernes 04','Sábado 05','Domingo 06'], datasets: [{ data: [77,121,134], borderColor: RED, backgroundColor: 'rgba(225,0,15,0.10)', fill: true, tension: 0.35, pointBackgroundColor: RED, pointRadius: 5, borderWidth: 3 }] },
     options: { maintainAspectRatio: false, responsive: true,
-        plugins: { legend: { display: false }, datalabels: { color: BLACK, font: { family: 'Plus Jakarta Sans', weight: '800', size: 13 }, align: 'top', offset: 8 } },
+        plugins: { legend: { display: false }, datalabels: { color: INK, font: { family: 'Plus Jakarta Sans', weight: '800', size: 13 }, align: 'top', offset: 8 } },
         scales: { y: { ...axisGrid, beginAtZero: true }, x: axisPlain } }
 });
 
@@ -652,12 +670,12 @@ new Chart(document.getElementById('chartPremiosGrouped'), {
     type: 'bar',
     data: { labels: ['Gorro con caja','Scrunchi celofán','Funda con caja','Cepillo con caja'],
         datasets: [
-            { label: 'Recibidos', data: [112,204,170,167], backgroundColor: BLACK, borderRadius: 3, barPercentage: 0.6 },
+            { label: 'Recibidos', data: [112,204,170,167], backgroundColor: DEEP, borderRadius: 3, barPercentage: 0.6 },
             { label: 'Entregados', data: [67,96,73,69], backgroundColor: RED, borderRadius: 3, barPercentage: 0.6 }
         ] },
     options: { maintainAspectRatio: false, responsive: true,
-        plugins: { legend: { position: 'bottom', labels: { color: BLACK, font, boxWidth: 10, padding: 14 } },
-            datalabels: { color: BLACK, font: { family: 'Plus Jakarta Sans', weight: '800', size: 10 }, anchor: 'end', align: 'end', offset: 4 } },
+        plugins: { legend: { position: 'bottom', labels: { color: INK, font, boxWidth: 10, padding: 14 } },
+            datalabels: { color: INK, font: { family: 'Plus Jakarta Sans', weight: '800', size: 10 }, anchor: 'end', align: 'end', offset: 4 } },
         scales: { y: { ...axisGrid, beginAtZero: true }, x: axisPlain } }
 });
 
@@ -666,10 +684,38 @@ donut('chartUsoMarca', ['Nunca la ha probado','La usa actualmente','La ha probad
 barH('chartCanales', ['Punto de venta','TV','Recomendación','Redes sociales','Revistas','Otro','Radio'], [54,43,35,33,6,6,5]);
 donut('chartPercepcion', ['Le gustó','Le encantó','Ni fu ni fa','No le gustó'], [126,91,47,11]);
 barH('chartAtributos', ['Mejor precio','Promociones y combos','Mejor resultado','Mayor disponibilidad','Mejor fragancia','Empaque/presentación'], [87,79,63,45,41,24]);
-barH('chartTipoCabello', ['Liso','Ondulado','Teñido/Con color','Graso','Rizado','Dañado','Seco','Afro'], [70,47,46,32,26,22,19,13], CORAL);
+barH('chartTipoCabello', ['Liso','Ondulado','Teñido/Con color','Graso','Rizado','Dañado','Seco','Afro'], [70,47,46,32,26,22,19,13], LIGHT);
 
 barH('chartMarcasCompetencia', ['Pantene','Dove','Elvive / LOréal','Herbal Essences','Savital','Tío Nacho','Sedal','Nivea'], [17,12,8,6,2,2,1,1]);
 donut('chartTiposActividad', ['Descuento/Promoción','Exhibición especial','Mercaderista en el punto','Degustación/Impulso'], [63,17,4,2]);
+
+const GALERIA = [{"pdv": "Éxito Colina", "ciudad": "Bogotá", "asesor": "Leidy Alejandra Tuta Arteaga", "fecha": "04/09", "url": "https://lh3.googleusercontent.com/d/1ryZLwa4lx5ZxFjusXrn7cTgbWQAfkNVz=w1200"}, {"pdv": "Jumbo Valle de Lili", "ciudad": "Cali", "asesor": "Laura Camila González Madroñero", "fecha": "04/09", "url": "https://lh3.googleusercontent.com/d/16hFKfg6oMo1cf6nRaM1FJx81DxXABdoe=w1200"}, {"pdv": "Euro Frontera", "ciudad": "Medellín", "asesor": "Lina Marcela Sanchez Carvajal", "fecha": "04/09", "url": "https://lh3.googleusercontent.com/d/1YlqduxLHwb_WNkMVRGt3A9IEPdiftxPS=w1200"}, {"pdv": "Éxito Unicentro Bogotá", "ciudad": "Bogotá", "asesor": "Nicol Valeria Aponte Salas", "fecha": "04/09", "url": "https://lh3.googleusercontent.com/d/1t7MRgNwbyWiglcPjpWTAA0nFYgXpVFPc=w1200"}, {"pdv": "Droguería Salud Market Chía", "ciudad": "Chía", "asesor": "Karen Lizeth Murillo Pinzon", "fecha": "04/09", "url": "https://lh3.googleusercontent.com/d/1pTBcjqpn7_gwhvgyIj82L1fMW1MVA1J-=w1200"}, {"pdv": "Euro Salomón", "ciudad": "Medellín", "asesor": "Natali Johanna Paz David", "fecha": "04/09", "url": "https://lh3.googleusercontent.com/d/1QTfI9MTDs_7mFbgRt6Lu35SVAVqcSUxm=w1200"}, {"pdv": "Farmatodo Viva Barranquilla", "ciudad": "Barranquilla", "asesor": "Angie Lorena Pardo Hernandez", "fecha": "04/09", "url": "https://lh3.googleusercontent.com/d/1yUhR153Wi-E1XyVrVvWq7VDAiByDKfnO=w1200"}, {"pdv": "Cañaveral Palmitex", "ciudad": "Palmira", "asesor": "Rosa Cilena Colorado", "fecha": "04/09", "url": "https://lh3.googleusercontent.com/d/1gzreyxL_uJKBFIcogCXx7P-Hnuj8ul9p=w1200"}, {"pdv": "Farmatodo Hayuelos", "ciudad": "Bogotá", "asesor": "Karen Julieth Alba Barrera", "fecha": "04/09", "url": "https://lh3.googleusercontent.com/d/1pmzGFwAJYBl8tsTZEnkxrOP7IcUdDp_A=w1200"}, {"pdv": "Éxito Colombia", "ciudad": "Medellín", "asesor": "Luna Macias Macias", "fecha": "04/09", "url": "https://lh3.googleusercontent.com/d/1Sed_C2bGSgC66sRPQSqLC-4olrTLytZS=w1200"}, {"pdv": "Farmatodo Centro Mayor", "ciudad": "Bogotá", "asesor": "Danna Valentina Pantoja Buitrago", "fecha": "04/09", "url": "https://lh3.googleusercontent.com/d/1vCZxWBeEYbcpGsEuj8b_zMzCnDyULwJi=w1200"}, {"pdv": "Jumbo Soacha", "ciudad": "Bogotá", "asesor": "Cristal Daza", "fecha": "04/09", "url": "https://lh3.googleusercontent.com/d/1ATdJeJnAoPbUQOY1vSVyPjrWbzN5rNjZ=w1200"}, {"pdv": "Éxito Bucaramanga", "ciudad": "Bucaramanga", "asesor": "Mariana Rivera Román", "fecha": "04/09", "url": "https://lh3.googleusercontent.com/d/1ZDf3BjXEea28a3pbST3faDfHcAmMLH2p=w1200"}, {"pdv": "Éxito Bello", "ciudad": "Medellín", "asesor": "Marlen Julieth RojasRojas", "fecha": "04/09", "url": "https://lh3.googleusercontent.com/d/1oRdrWCsCTkRceBOHkGh2WqeNM7O_Q5xF=w1200"}, {"pdv": "Mercaldas Versalles", "ciudad": "Manizales", "asesor": "Sara Florez Velez", "fecha": "04/09", "url": "https://lh3.googleusercontent.com/d/1jzh78Zhxydla3PFh4PKIpcEiLlSLJ_fo=w1200"}, {"pdv": "Surtiplaza Salado", "ciudad": "Ibagué", "asesor": "Jenny Paola Soto Alcala", "fecha": "04/09", "url": "https://lh3.googleusercontent.com/d/1bc6Vow4L68di-vymT1qFTU__Xz560t8_=w1200"}, {"pdv": "Jumbo Santa Ana", "ciudad": "Bogotá", "asesor": "Yudi Katerine Chavez Yocuro", "fecha": "04/09", "url": "https://lh3.googleusercontent.com/d/1hKX75TPHZa4-ApbqDqTgwgGfVOIGIDqU=w1200"}, {"pdv": "Euro Frontera", "ciudad": "Medellín", "asesor": "Lina Marcela Sanchez Carvajal", "fecha": "05/09", "url": "https://lh3.googleusercontent.com/d/1YlqduxLHwb_WNkMVRGt3A9IEPdiftxPS=w1200"}, {"pdv": "Droguería Salud Market Chía", "ciudad": "Chía", "asesor": "Karen Lizeth Murillo Pinzon", "fecha": "05/09", "url": "https://lh3.googleusercontent.com/d/1S2FPQ55OZhwrqV3N390EgxKmqsuO5F8r=w1200"}, {"pdv": "Éxito Villa Mayor Wow", "ciudad": "Bogotá", "asesor": "Danna Valentina Pantoja Buitrago", "fecha": "05/09", "url": "https://lh3.googleusercontent.com/d/1ctHFGBGtKFlJhAGZKtgANf7U_0ym0iGD=w1200"}, {"pdv": "Farmatodo Galerías", "ciudad": "Bogotá", "asesor": "Sara Valero", "fecha": "05/09", "url": "https://lh3.googleusercontent.com/d/1jnQUhONPjuQ9zy3B8ZlFHFoF8krmustO=w1200"}, {"pdv": "Jumbo Calle 170", "ciudad": "Bogotá", "asesor": "Lina Gisel Andrade", "fecha": "05/09", "url": "https://lh3.googleusercontent.com/d/18S4A9XSrnxs8HTZWiUIfn90BxN5WJj6y=w1200"}, {"pdv": "Éxito Poblado", "ciudad": "Medellín", "asesor": "Lina Marcela Sanchez Carvajal", "fecha": "05/09", "url": "https://lh3.googleusercontent.com/d/1Q6LcjUpQUdxwHL0E0ZGifL0K1ibh2VLf=w1200"}, {"pdv": "Cañaveral La Primera", "ciudad": "Cali", "asesor": "Rosa Cilena Colorado", "fecha": "05/09", "url": "https://lh3.googleusercontent.com/d/10qbJnTJkWx8lULxIj5KHes76myVBjx-8=w1200"}, {"pdv": "Éxito San Antonio", "ciudad": "Medellín", "asesor": "Luna Macias Macias", "fecha": "05/09", "url": "https://lh3.googleusercontent.com/d/1uftdbqb1211524DSMaIkf-rW60LYClDl=w1200"}, {"pdv": "Éxito Barranquilla", "ciudad": "Barranquilla", "asesor": "Angie Lorena Pardo Hernandez", "fecha": "05/09", "url": "https://lh3.googleusercontent.com/d/18HvLrA_qR4YgWqQ-7qOOshuYjZrbY-Gh=w1200"}, {"pdv": "Jumbo Hayuelos", "ciudad": "Bogotá", "asesor": "Karen Julieth Alba Barrera", "fecha": "05/09", "url": "https://lh3.googleusercontent.com/d/1VdzBOBEUtlILxA-t1Bue7otke5Lqgnve=w1200"}, {"pdv": "Mercaldas Versalles", "ciudad": "Manizales", "asesor": "Sara Florez Velez", "fecha": "05/09", "url": "https://lh3.googleusercontent.com/d/1l1ygUwe6PFB3xYwHqD0nxeYh2TBW8Bs5=w1200"}, {"pdv": "Éxito Chapinero", "ciudad": "Bogotá", "asesor": "Leidy Daniela Austillo", "fecha": "05/09", "url": "https://lh3.googleusercontent.com/d/1EE2Djps8cJxJMZ_RPZ5H0LS146fEuayT=w1200"}, {"pdv": "Farmatodo CC Unicentro", "ciudad": "Bogotá", "asesor": "Yudi Katerine Chavez Yocuro", "fecha": "05/09", "url": "https://lh3.googleusercontent.com/d/17t3aKV4ZIn1ePES5QDjwTX4KLA9AYhyl=w1200"}, {"pdv": "Éxito Laureles Wow", "ciudad": "Medellín", "asesor": "Marlen Julieth RojasRojas", "fecha": "05/09", "url": "https://lh3.googleusercontent.com/d/1Tr60oXs06yEordjALCp66E7POPrUHNrc=w1200"}, {"pdv": "Éxito Oriental Bucaramanga CV", "ciudad": "Bucaramanga", "asesor": "Mariana Rivera Román", "fecha": "05/09", "url": "https://lh3.googleusercontent.com/d/1GDyAw1X9NwjpWQ1W4dGtUcty2ks2UqxW=w1200"}, {"pdv": "Éxito San Fernando", "ciudad": "Cali", "asesor": "Laura Camila González Madroñero", "fecha": "05/09", "url": "https://lh3.googleusercontent.com/d/19oRpF-VaHVRih9N_L4G7A_qXxI8OKerN=w1200"}, {"pdv": "Éxito Envigado Wow", "ciudad": "Medellín", "asesor": "Natali Johanna Paz David", "fecha": "05/09", "url": "https://lh3.googleusercontent.com/d/1Cp8px5y9mHYdLpZ62VEO90Re5KmDbOM-=w1200"}, {"pdv": "Jumbo Chía", "ciudad": "Chía", "asesor": "Karen Lizeth Murillo Pinzon", "fecha": "06/09", "url": "https://lh3.googleusercontent.com/d/15cev2FSNOg6eWkXMmStCl6VNvK9fYqz5=w1200"}, {"pdv": "Jumbo Americano", "ciudad": "Barranquilla", "asesor": "Daniela Andrea Calvo Corena", "fecha": "06/09", "url": "https://lh3.googleusercontent.com/d/1lfqNmQ22f6JirKbCjMPBY1edKPiU88dV=w1200"}, {"pdv": "Éxito Calle 80", "ciudad": "Bogotá", "asesor": "Leidy Daniela Austillo", "fecha": "06/09", "url": "https://lh3.googleusercontent.com/d/1l261RgAvzhccsxlcWLUk-YRcda_bOyXa=w1200"}, {"pdv": "Éxito Country", "ciudad": "Bogotá", "asesor": "Nicol Valeria Aponte Salas", "fecha": "06/09", "url": "https://lh3.googleusercontent.com/d/1tfiDoS1imYHxvgnIVFKLJBQWasZK-Hau=w1200"}, {"pdv": "Éxito Colina", "ciudad": "Bogotá", "asesor": "Valentina Salamanca Guerrero", "fecha": "06/09", "url": "https://lh3.googleusercontent.com/d/1FKuoF86VuSSH33OztRH4eN9L4YPJkmZE=w1200"}, {"pdv": "Jumbo Hayuelos", "ciudad": "Bogotá", "asesor": "Karen Julieth Alba Barrera", "fecha": "06/09", "url": "https://lh3.googleusercontent.com/d/1ml1GLbSjVDDNU8WwEA5OziYMQjbT7BMe=w1200"}, {"pdv": "Éxito San Antonio", "ciudad": "Medellín", "asesor": "Luna Macias Macias", "fecha": "06/09", "url": "https://lh3.googleusercontent.com/d/1rkWc9i5wSpDyTIaKGeyzxyenGO4pn4Lr=w1200"}, {"pdv": "Jumbo Santafé", "ciudad": "Bogotá", "asesor": "Sara Valero", "fecha": "06/09", "url": "https://lh3.googleusercontent.com/d/1l-6UC2ZMH97vrIhro3GN-GCJyJ40UfTc=w1200"}, {"pdv": "Éxito Oriental Bucaramanga CV", "ciudad": "Bucaramanga", "asesor": "Mariana Rivera Román", "fecha": "06/09", "url": "https://lh3.googleusercontent.com/d/1PwELs_IHr5VIZgYCneX9IC8yLnKLDms7=w1200"}, {"pdv": "Mercacentro No. 9", "ciudad": "Ibagué", "asesor": "Jenny Paola Soto Alcala", "fecha": "06/09", "url": "https://lh3.googleusercontent.com/d/1GMRFlCaC86XeCG7s578K4h3ICYhdi1O9=w1200"}, {"pdv": "Cañaveral Pance", "ciudad": "Cali", "asesor": "Rosa Cilena Colorado", "fecha": "06/09", "url": "https://lh3.googleusercontent.com/d/1WwHOQcqvZSCheCSu8PeXrsjCUdF_t7Kz=w1200"}, {"pdv": "Jumbo Suba", "ciudad": "Bogotá", "asesor": "Yudi Katerine Chavez Yocuro", "fecha": "06/09", "url": "https://lh3.googleusercontent.com/d/127L2gQ8YKKVqZY9dp7zOCrz0TXaAiBpO=w1200"}, {"pdv": "Éxito Laureles Wow", "ciudad": "Medellín", "asesor": "Marlen Julieth RojasRojas", "fecha": "06/09", "url": "https://lh3.googleusercontent.com/d/177f0y36I-cc-n1jZhoCiTAPP2iOxVYiX=w1200"}, {"pdv": "Mercaldas Palermo", "ciudad": "Manizales", "asesor": "Sara Florez Velez", "fecha": "06/09", "url": "https://lh3.googleusercontent.com/d/19wpvF929u8_Dio78omuO-oAgnViDBFAS=w1200"}, {"pdv": "Éxito La Flora", "ciudad": "Cali", "asesor": "Laura Camila González Madroñero", "fecha": "06/09", "url": "https://lh3.googleusercontent.com/d/18NwWEW2tf0BimWNuMKl4BKqwcTM2G1kN=w1200"}, {"pdv": "Jumbo Calle 80", "ciudad": "Bogotá", "asesor": "Lina Gisel Andrade", "fecha": "06/09", "url": "https://lh3.googleusercontent.com/d/1pN-anHcaN4ogsNXP_6eES1fRCkFNnbdn=w1200"}, {"pdv": "Éxito Envigado Wow", "ciudad": "Medellín", "asesor": "Natali Johanna Paz David", "fecha": "06/09", "url": "https://lh3.googleusercontent.com/d/1RVm3ywNKsEFNVM21n0q7vAgKIPe1ADJK=w1200"}, {"pdv": "Éxito Bello", "ciudad": "Medellín", "asesor": "Lina Marcela Sanchez Carvajal", "fecha": "06/09", "url": "https://lh3.googleusercontent.com/d/1oi95fiSzZv_hBdinyAAIaXq2aTfGskYB=w1200"}];
+
+let carIndex = 0;
+let carTimer = null;
+function mostrarCarrusel() {
+    const v = GALERIA[carIndex]; if (!v) return;
+    const img = document.getElementById('carImg');
+    img.style.opacity = 0;
+    const pre = new Image();
+    pre.referrerPolicy = 'no-referrer';
+    pre.onload = function () { img.src = v.url; img.style.opacity = 1; };
+    pre.src = v.url;
+    document.getElementById('carPdv').textContent = v.pdv;
+    document.getElementById('carMeta').textContent = [v.ciudad, v.asesor, v.fecha].filter(Boolean).join(' · ');
+    document.getElementById('carCounter').textContent = (carIndex + 1) + ' / ' + GALERIA.length;
+}
+function carSiguiente() { carIndex = (carIndex + 1) % GALERIA.length; mostrarCarrusel(); }
+function carAnterior() { carIndex = (carIndex - 1 + GALERIA.length) % GALERIA.length; mostrarCarrusel(); }
+function reiniciarAutoplay() { clearInterval(carTimer); carTimer = setInterval(carSiguiente, 4000); }
+document.getElementById('carNext').addEventListener('click', function (e) { e.stopPropagation(); carSiguiente(); reiniciarAutoplay(); });
+document.getElementById('carPrev').addEventListener('click', function (e) { e.stopPropagation(); carAnterior(); reiniciarAutoplay(); });
+document.getElementById('carStage').addEventListener('click', function (e) {
+    if (e.target.closest('.car-nav')) return;
+    carSiguiente(); reiniciarAutoplay();
+});
+mostrarCarrusel();
+reiniciarAutoplay();
 </script>
 
 </body>
